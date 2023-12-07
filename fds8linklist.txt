@@ -189,3 +189,19 @@ switch(choice)
 }while(choice!=8);
 
 }
+
+
+
+
+
+
+
+
+/*Linked List: A linked list is a linear data structure consisting of a group of nodes
+which together represent a sequence.
+Following are the basic operations supported by a list.
+a) Insertion − add an element at the beginning of the list.
+b) Deletion −delete an element at the beginning of the list.
+Display −displaying complete list.
+d) Search − search an element using given key.
+e) Delete − delete an element using given key.*/
