@@ -11,3 +11,22 @@ for i in range (0,5) :
         if type=='w':
                 net_amount = net_amount-amount
 print("your bank balance is :",net_amount,"rs")
+
+
+
+
+
+
+
+
+#ARRAY:
+#Array is defined as a collection of elements of same data type.
+#Hence, it is also called as homogeneous collection of data items.
+
+#Algorithm to computes the net amount of a bank account based a transaction log :
+#1. Start
+#2. Read type of transaction and amount.
+#3. If it deposit type of transaction then add it in balance
+#4. Else if it is withdrawal operation then decrease balance
+#5. Display total balance
+#6. Stop.
