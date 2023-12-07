@@ -153,3 +153,33 @@ int main()
  } 
  }while(ch!=4); 
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Circular Queue
+In a normal Queue Data Structure, we can insert elements until queue becomes full. But once if
+queue becomes full, we can’t insert the next element until all the elements are deleted from the
+queue.
+Implementation of Circular Queue:
+To implement a circular queue data structure using array, we first perform the following
+steps before we implement actual operations.
+Step 1: Include all the header files which are used in the program and define a constant
+‘SIZE’ with specific value.
+Step 2: Declare all user defined functions used in circular queue implementation.
+Step 3: Create a one dimensional array with above defined SIZE (int cQueue[SIZE])
+Step 4: Define two integer variables ‘front’ and ‘rear’ and initialize both with ‘-1’. (int
+front = -1, rear = -1)
+Step 5: Implement main method by displaying menu of operations list and make suitable
+function calls to perform operation selected by the user on circular queue.*/
