@@ -107,3 +107,37 @@ while flag==1:
 
 
 #<----------------------------------------END OF PROGRAM------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+#Algorithm for Insertion Sort:
+#Step 1 − If it is the 􀏐irst element, it is already sorted. return 1;
+#Step 2 − Pick next element
+#Step 3 − Compare with all elements in the sorted sub-list
+#Step 4 − Shift all the elements in the sorted sub-list that is greater than the value to be
+#sorted
+#Step 5 − Insert the value
+#Step 6 − Repeat until list is sorted
+#Algorithm for Shell Sort:
+#Step 1 − Initialize the value of h
+#Step 2 − Divide the list into smaller sub-list of equal interval h
+#Step 3 − Sort these sub-lists using insertion sort
+#Step 3 − Repeat until complete list is sorted
+
+#Shell Sort:
+#The shell sort, improves on the insertion sort by breaking the original list
+#into a number of smaller sublists, each of which is sorted using an insertion sort. The
+#unique way that these sublists are chosen is the key to the shell sort.
+#Insertion Sort:
+#This is a in-place comparison based sorting algorithm. Here, a sub-list is
+#maintained which is always sorted. For example, the lower part of an array is maintained
+#to be sorted. A element which is to be 'inserted’ in this sorted sub-list, has to find its
+#appropriate place and insert it there. Hence the name insertion sort
