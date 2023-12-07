@@ -155,3 +155,41 @@ break;
 }while(c!=7);
 return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*Double Ended Queue can be represented in two ways, those are as follows...
+
+Input Restricted Double Ended Queue
+In input restricted double ended queue, the insertion operation is performed at only one
+end and deletion operation is performed at both the ends.
+Output Restricted Double Ended Queue
+In output restricted double ended queue, the deletion operation is performed at only one
+end and insertion operation is performed at both the ends.
+Algorithm for Insertion of element from front:
+Step1. Start
+Step2. Check the queue is full or not as if (r == maxsize-1) &&(f==0)
+Step3. If false update the pointer f as f= f-1(OR f=((f-1)+ maxsize )% maxsize )
+Step4. Insert the element at pointer f as Q[f] = element
+Step5. Stop
+Algorithm for Insertion of element from rear:
+Step1: Start
+Step2: Check the queue is full or not as if (r == maxsize-1) &&(f==0) if yes queue is full
+Step3: If false update the pointer r as r= r+1
+Step4: Insert the element at pointer r as Q[r] = element
+Step5: Stop
+Algorithm for deletion of element from front:
+Step1: Start
+Step2: Check the queue is empty or not as if (f == r) if yes queue is empty.
+Step3: If false update pointer f as f = f+1and delete element at position f as element= Q[f]
+Step4: If ( f== r) reset pointer f and r as f = r = -1
+Step5: Stop*/
