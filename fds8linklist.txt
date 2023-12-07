@@ -1,0 +1,191 @@
+#include <iostream>
+using namespace std;
+class node
+{
+ public:
+ int roll;
+ node* next;
+
+  node()
+  {
+   roll=0;
+   next=NULL;
+  }
+
+};
+class set
+{
+ public:
+  node* head;
+  node* tail;
+  set()
+  {
+   head=tail=NULL;
+  }
+  void createlist()
+  {
+   node* temp;
+   int n;;
+   cout<<"Enter number of students: ";
+   cin>>n;
+   for(int i=0;i<n;i++)
+   {
+    temp=new node;
+    cout<<"Enter roll no: ";
+    cin>>temp->roll;
+    if(head==NULL)
+    {
+     head=temp;
+     tail=temp;
+    }
+    else
+    {
+     tail->next=temp;
+     tail=temp;
+    }
+   }
+  }
+
+  int unio(set s1, set s2)
+  {
+   node* t1;
+   node* t2;
+   int count=0, flag=0;
+   t1=s1.head;
+   while(t1!=NULL)
+   {
+    cout<<t1->roll<<"\t";
+    t1=t1->next;
+    count++;
+   }
+   for(t2=s2.head;t2!=NULL;t2=t2->next)
+   {
+    flag=0;
+    for(t1=s1.head;t1!=NULL;t1=t1->next)
+    {
+     if(t2->roll==t1->roll)
+     {
+      flag=1;
+      break;
+     }
+    }
+    if(flag!=1)
+    {
+     cout<<t2->roll<<"\t";
+     count++;
+    }
+   }
+   return count;
+  }
+  void vanilla(set s1, set s2)
+  {
+   node* t1;
+   node* t2;
+   int flag=0;
+   for(t1=s1.head;t1!=NULL;t1=t1->next)
+   {
+    flag=0;
+    for(t2=s2.head;t2!=NULL;t2=t2->next)
+    {
+     if(t1->roll==t2->roll)
+     {
+      flag=1;
+      break;
+     }
+    }
+    if(flag!=1)
+    {
+     cout<<t1->roll<<"\t";
+    }
+   }
+  }
+  void butterscotch(set s1, set s2)
+  {
+   node* t1;
+   node* t2;
+   int flag=0;
+   for(t2=s2.head;t2!=NULL;t2=t2->next)
+   {
+    flag=0;
+    for(t1=s1.head;t1!=NULL;t1=t1->next)
+    {
+     if(t1->roll==t2->roll)
+     {
+      flag=1;
+      break;
+     }
+    }
+    if(flag!=1)
+    {
+     cout<<t2->roll<<"\t";
+    }
+   }
+  }
+  void inter(set s1, set s2)
+  {
+   node* t1;
+   node* t2;
+   int flag=0;
+   for(t1=s1.head;t1!=NULL;t1=t1->next)
+   {
+    flag=0;
+    for(t2=s2.head;t2!=NULL;t2=t2->next)
+    {
+     if(t1->roll==t2->roll)
+     {
+      flag=1;
+      break;
+     }
+    }
+    if(flag==1)
+    {
+     cout<<t1->roll<<"\t";
+    }
+   }
+  }
+
+};
+int main()
+{
+
+set s1, s2, s3;
+int m, choice;
+cout<<"Enter total number of students: ";
+cin>>m;
+do
+{
+cout<<endl;
+cout<<"1.Enter Number of students who like vanilla flavour\n"
+      "2.Enter Number of students who like butterscotch flavour\n"
+   "3.Display Number of students who like vanilla only\n"
+   "4.Display Number of students who like butterscotch only\n"
+   "5.Display Number of Students who like vanilla or butterscotch\n"
+   "6.Display Number of Students who like vanilla and butterscotch\n"
+   "7.Display Number of Students who neither like vanilla nor butterscotch\n"
+   "8.Exit\n";
+cout<<"\nEnter choice: ";
+cin>>choice;
+
+switch(choice)
+{
+ case 1:s1.createlist();
+ break;
+ case 2:s2.createlist();
+ break;
+ case 3:s3.vanilla(s1, s2);
+ break;
+ case 4:s3.butterscotch(s1, s2);
+ break;
+ case 5:int count;
+ count=s3.unio(s1, s2);
+ break;
+ case 6:s3.inter(s1, s2);
+ break;
+ case 7:
+
+ cout<<"Number of Students who neither like vanilla nor butterscotch: "<<m-count;
+
+}
+}while(choice!=8);
+
+}
