@@ -95,3 +95,33 @@ cout<<endl<<d<<", ";
 cout<<endl;
 return 22;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Queueis a linear structure which follows a particular order in which the operations are
+performed. The order is First In First Out (FIFO).A good example of queue is any queue of
+consumers for a resource where the consumer that came first is served first.
+The difference between stacks and queues is in removing. In a stack we remove the item the
+most recently added; in a queue, we remove the item the least recently added.
+The following steps should be taken to enqueue (insert) data into a queue :
+Step 1 − Check if queue is full.
+Step 2 − If queue is full, produce over􀏐low error and exit.
+Step 3 − If queue is not full, increment rear pointer to point next empty space.
+Step 4 − Add data element to the queue location, where rear is pointing.
+Step 5 − return success.
+The following steps are taken to perform dequeue operation:
+Step 1 − Check if queue is empty.
+Step 2 − If queue is empty, produce under􀏐low error and exit.
+Step 3 − If queue is not empty, access data where front is pointing.
+Step 3 − Increment front pointer to point next available data element.
+Step 5 − return success.*/
