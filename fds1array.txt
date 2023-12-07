@@ -48,4 +48,22 @@ print("Most marks obtained: ",fcount)
 
 
 
+#Array is defined as a collection of elements of same data type.
+#Algorithm to accept 10 student’s marks:
+#1. Start
+#2. Read the marks of 10 students and stored in array (-1 for absent student)
+#3. Calculate and print the average of 10 student’s marks
+#4. Comparing all student’s marks print highest marks
+#5. Comparing all student’s marks print lowest marks
+#6. Comparing all student’s marks print mark scored by most of the students
+#7. Comparing -1 in an array, print absent students
+#8. Stop
+
+
+
+
+
+
+
+
 
